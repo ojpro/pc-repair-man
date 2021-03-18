@@ -1,0 +1,18 @@
+
+// Statistics Section
+.statistics {
+  .container{
+      width: 80%;
+      margin: 1rem auto;
+      ul{
+          display: flex;
+          @include flex-row-between-wrap;
+          li{
+              background-color: $gray-200;
+              span{
+                  background-color: $blue-400;
+              }
+          }
+      }
+  }
+}

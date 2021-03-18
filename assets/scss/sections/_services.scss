@@ -1,0 +1,32 @@
+.services {
+  padding: 8px; //! use padding for all section
+  &_container {
+    //! Hard Coded
+    width: 60%;
+    margin: auto;
+    margin-top: -2.5rem;
+    display: flex;
+    .service_box {
+      padding: 2px 8px;
+      text-align: center;
+      color: #ffffff;
+      .service_icon{
+        width: 54px;
+        height: 54px;
+        margin: 16px auto;
+      }
+      &~.service_box {
+        border-left: 2px solid $gray-100;
+      }
+      &:nth-child(1) {
+        background-color: rgba($blue-500,.6);
+      }
+      &:nth-child(2) {
+        background-color: rgba($orange-400,.6);
+      }
+      &:nth-child(3) {
+        background-color: rgba($pink-300,.6);
+      }
+    }
+  }
+}

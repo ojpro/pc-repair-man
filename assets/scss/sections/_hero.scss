@@ -1,0 +1,33 @@
+.hero {
+  padding: 4rem;
+  &_container {
+    @include flex-row-between-wrap;
+    &_info{
+      margin-top: 4rem;
+      width: 46%; //! Hard Coded
+      &_heading{
+        color: $gray-700;
+      }
+      &_sub-heading{
+        color: $gray-600;
+        margin-left: 8px;
+      }
+    }
+  }
+  &_CTA{
+    text-align: center;
+    margin: 1rem;
+    &_button{
+      //! Make this button on the componets file
+      padding: 8px 28px;
+      border: 2px solid $orange-400;
+      background-color:$orange-700;
+      color: $gray-100;
+      border-radius: 99px;
+      box-shadow: 1px 1px 8px $orange-400;
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.navbar {
+  padding: 4px 1.5rem;
+  line-height: 36px;
+  @include flex-row-between;
+  &_logo {
+    color: $white;
+  }
+  &_links {
+    ul {
+      li {
+        display: inline-block;
+        a {
+          color: $gray-500;
+          position: relative;
+          &:hover {
+            color: $gray-400;
+            // &:after {
+            //   content: "";
+            //   position: absolute;
+            //   bottom: 0;
+            //   left: 0;
+            //   height: 2px;
+            //   width: 100%;
+            //   border-radius: 99px;
+            //   background-color: $gray-400;
+            // }
+          }
+        }
+        &~li {
+          //! two times I repeat it
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

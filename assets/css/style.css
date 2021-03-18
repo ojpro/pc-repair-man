@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', Tahoma, Arial; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+@key-frames animatefromleft {
+  from {
+    transform: translateX(-100%); }
+
+  to {
+    transform: translateX(-100%); } }
+header {
+  background-color: #f1f2f6;
+  width: 100%;
+  height: auto; }
+  header .top_navbar {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #dfe4ea; }
+    header .top_navbar > div ul {
+      padding: 4px 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      header .top_navbar > div ul li {
+        display: inline-block; }
+        header .top_navbar > div ul li ~ li {
+          margin-left: 1rem; }
+    header .top_navbar_contact ul li a {
+      color: #57606f; }
+    header .top_navbar_social_media_links ul {
+      margin-top: 2px; }
+      header .top_navbar_social_media_links ul li a svg {
+        fill: #747d8c;
+        width: 18px;
+        height: 18px; }
+      header .top_navbar_social_media_links ul li a:hover .facebook {
+        fill: #0084ff; }
+      header .top_navbar_social_media_links ul li a:hover .instagram {
+        fill: #e4405f; }
+      header .top_navbar_social_media_links ul li a:hover .twitter {
+        fill: #55acee; }
+      header .top_navbar_social_media_links ul li a:hover .whatsapp {
+        fill: #25d366; }
+      header .top_navbar_social_media_links ul li a:hover .youtube {
+        fill: #ff3838; }
+  header .navbar {
+    padding: 4px 1.5rem;
+    line-height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    header .navbar_logo {
+      color: #ffffff; }
+    header .navbar_links ul li {
+      display: inline-block; }
+      header .navbar_links ul li a {
+        color: #747d8c;
+        position: relative; }
+        header .navbar_links ul li a:hover {
+          color: #a4b0be; }
+      header .navbar_links ul li ~ li {
+        margin-left: 1rem; }
+  header .hero {
+    padding: 4rem; }
+    header .hero_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      header .hero_container_info {
+        margin-top: 4rem;
+        width: 46%; }
+        header .hero_container_info_heading {
+          color: #4b4b4b; }
+        header .hero_container_info_sub-heading {
+          color: #57606f;
+          margin-left: 8px; }
+    header .hero_CTA {
+      text-align: center;
+      margin: 1rem; }
+      header .hero_CTA_button {
+        padding: 8px 28px;
+        border: 2px solid #ffaf40;
+        background-color: #FF9800;
+        color: #f1f2f6;
+        border-radius: 99px;
+        box-shadow: 1px 1px 8px #ffaf40; }
+        header .hero_CTA_button:hover {
+          box-shadow: none; }
+
+.services {
+  padding: 8px; }
+  .services_container {
+    width: 60%;
+    margin: auto;
+    margin-top: -2.5rem;
+    display: flex; }
+    .services_container .service_box {
+      padding: 2px 8px;
+      text-align: center;
+      color: #ffffff; }
+      .services_container .service_box .service_icon {
+        width: 54px;
+        height: 54px;
+        margin: 16px auto; }
+      .services_container .service_box ~ .service_box {
+        border-left: 2px solid #f1f2f6; }
+      .services_container .service_box:nth-child(1) {
+        background-color: rgba(23, 192, 235, 0.6); }
+      .services_container .service_box:nth-child(2) {
+        background-color: rgba(255, 175, 64, 0.6); }
+      .services_container .service_box:nth-child(3) {
+        background-color: rgba(205, 132, 241, 0.6); }
+
+.gallery_container {
+  padding: 4rem; }
+  .gallery_container ul {
+    display: flex;
+    flex-wrap: wrap; }
+    .gallery_container ul li {
+      margin: 4px;
+      height: 40vh;
+      flex-grow: 1;
+      overflow: hidden; }
+      .gallery_container ul li img {
+        min-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        vertical-align: bottom; }
+        .gallery_container ul li img:hover {
+          transform: scale(1.2);
+          transition: all .6s linear; }
+      .gallery_container ul li:last-child {
+        flex-grow: 10; }
+
+.our_services .container {
+  width: 80%;
+  margin: 1rem auto; }
+  .our_services .container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 2rem; }
+    .our_services .container ul .service {
+      max-width: 20vw;
+      text-align: center; }
+      .our_services .container ul .service_icon {
+        width: 36px; }
+
+.statistics .container {
+  width: 80%;
+  margin: 1rem auto; }
+  .statistics .container ul {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .statistics .container ul li {
+      background-color: #dfe4ea; }
+      .statistics .container ul li span {
+        background-color: #18dcff; }
+
+.testimonials {
+  position: relative; }
+  .testimonials .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; }
+    .testimonials .overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../resources/images/testimonial.png");
+      opacity: .2; }
+  .testimonials .container {
+    margin-top: 46px;
+    position: relative; }
+    .testimonials .container .feedback {
+      padding: 4rem; }
+      .testimonials .container .feedback_slide {
+        text-align: center; }
+        .testimonials .container .feedback_slide_photo {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 50%; }
+        .testimonials .container .feedback_slide_name {
+          color: #ffffff; }
+        .testimonials .container .feedback_slide_content {
+          color: #ffffff;
+          margin-top: 1rem; }
+    .testimonials .container .swiper-button-prev,
+    .testimonials .container .swiper-button-next {
+      color: #eee; }
+
+.contact .map {
+  background-color: red;
+  width: 500px;
+  height: 400px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+.top_navbar {
+  width: 100%;
+  height: 32px;
+  @include flex-row-between;
+  background-color: $gray-200;
+  &>div {
+    ul {
+      padding: 4px 16px;
+      @include flex-row-between;
+      li {
+        display: inline-block;
+        &~li {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  &_contact{
+    ul li a{
+      color: $gray-600;
+    }
+  }
+  &_social_media_links {
+    ul {
+      margin-top: 2px;
+      li {
+        a {
+          svg {
+            fill: $gray-500;
+            width: 18px;
+            height: 18px;
+          }
+          &:hover {
+            .facebook {
+              fill: $facebook;
+            }
+            .instagram {
+              fill: $instagram;
+            }
+            .twitter {
+              fill: $twitter;
+            }
+            .whatsapp {
+              fill: $whatsapp;
+            }
+            .youtube {
+              fill: $youtube;
+            }
+          }
+        }
+      }
+    }
+  }
+}

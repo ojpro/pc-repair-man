@@ -1,0 +1,42 @@
+.testimonials {
+  position: relative;
+  .overlay {
+    @include absolute-fh-fw;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      &::after {
+          content: '';
+          @include absolute-fh-fw;
+          background-image: url('../../resources/images/testimonial.png');
+          opacity: .2;
+      }
+  }
+  .container {
+      margin-top: 46px;
+      position: relative;
+      .feedback{
+          padding: 4rem;
+          &_slide{
+              text-align: center;
+              &_photo{
+                  width: 120px;
+                  height: 120px;
+                  object-fit: cover;
+                  border-radius: 50%;
+              }
+              &_name{
+                  color: $white;
+              }
+              &_content{
+                  color: $white;
+                  margin-top: 1rem;
+              }
+          }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+          color: #eee;
+      }
+  }
+}

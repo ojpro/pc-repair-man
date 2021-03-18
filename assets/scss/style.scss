@@ -1,0 +1,13 @@
+// Import Helpers
+@import 'helpers/variables';
+@import 'helpers/reset';
+@import 'helpers/mixins';
+@import 'helpers/animations';
+// Import Sections Style
+@import 'sections/header';
+@import 'sections/services';
+@import 'sections/gallery';
+@import 'sections/our_services';
+@import 'sections/statistics';
+@import 'sections/testimonials';
+@import 'sections/contact';

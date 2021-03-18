@@ -1,0 +1,8 @@
+header {
+  background-color: $gray-100;
+  width: 100%;
+  height: auto;
+  @import './top-navbar';
+  @import './navbar';
+  @import './hero';
+}
