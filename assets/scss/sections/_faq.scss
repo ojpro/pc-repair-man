@@ -1,0 +1,40 @@
+.faq {
+  .container {
+    width: 80%;
+    max-width: 540px;
+    margin: 2rem auto;
+    details {
+      display: block;
+      border: 1px solid $gray-200;
+      background-color: $white;
+      &[open] summary~* {
+        animation: accordion .6s ease-in-out;
+      }
+      &~details {
+        border-top: none;
+      }
+      summary {
+        padding: 4px 8px; //! DRY
+        font-size: 18px;
+        font-weight: 400;
+        color: #1f1f1f;
+        background-color: $gray-100;
+        cursor: pointer;
+      }
+      p {
+        margin: 4px 8px; //! DRY
+      }
+    }
+    .add_question {
+      width: max-content;
+      margin: 1.5rem auto;
+      a {
+        padding: 8px 12px;
+        border: 1px solid $blue-500;
+        text-align: center;
+        background-color: $blue-500;
+        color: $white;
+      }
+    }
+  }
+}

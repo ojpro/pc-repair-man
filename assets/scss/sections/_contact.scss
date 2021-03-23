@@ -1,7 +1,55 @@
-.contact{
-  .map{
-    background-color: red;
-width: 500px;
-height: 400px;
+  .contact {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &_map {
+      width: 50%;
+      height: 480px;
+      position: relative;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0 !important;
+        overflow: hidden !important;
+      }
+    }
+    &_form {
+      width: 50%;
+      padding: 1.5rem;
+      form {
+        width: 80%;
+        position: relative;
+        &>label {
+          display: block;
+          height: 34px;
+          margin: 16px auto;
+          position: relative;
+          input[type="text"],
+          input[type="email"] {
+            @include absolute-fh-fw;
+            @extend %contact-field;
+          }
+          span {
+            @extend %contact-field-span;
+          }
+          &:last-of-type {
+            width: auto;
+            height: auto;
+          }
+        }
+        .context {
+          position: relative;
+          textarea {
+            resize: vertical;
+            max-width: 100%;
+            min-width: 100%;
+            @extend %contact-field;
+          }
+          span {
+            @extend %contact-field-span;
+          }
+        }
+      }
+    }
   }
-}

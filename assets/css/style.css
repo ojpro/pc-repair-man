@@ -3,7 +3,8 @@
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 body {
   font-family: 'Poppins', Tahoma, Arial; }
@@ -14,12 +15,45 @@ a {
 ul {
   list-style: none; }
 
-@key-frames animatefromleft {
+.contact_form form > label input[type="text"],
+.contact_form form > label input[type="email"], .contact_form form .context textarea {
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  padding: 2px 12px;
+  z-index: 2;
+  background-color: transparent; }
+  .contact_form form > label input[type="text"]:focus,
+  .contact_form form > label input[type="email"]:focus, .contact_form form .context textarea:focus {
+    border: 2px solid #17c0eb; }
+  .contact_form form > label input.changed[type="text"],
+  .contact_form form > label input.changed[type="email"], .contact_form form .context textarea.changed {
+    background-color: #ffffff; }
+  .contact_form form > label input[type="text"]:focus + span,
+  .contact_form form > label input[type="email"]:focus + span, .contact_form form .context textarea:focus + span {
+    left: 6px;
+    top: -16px;
+    font-size: 13px;
+    z-index: 3;
+    transition: all 250ms ease-in-out; }
+
+.contact_form form > label span, .contact_form form .context span {
+  position: absolute;
+  left: 12px;
+  top: 6px;
+  font-size: 14px;
+  color: #57606f;
+  z-index: 1; }
+
+@keyframes animatefromleft {
   from {
     transform: translateX(-100%); }
-
   to {
     transform: translateX(-100%); } }
+@keyframes accordion {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 header {
   background-color: #f1f2f6;
   width: 100%;
@@ -164,20 +198,6 @@ header {
       .our_services .container ul .service_icon {
         width: 36px; }
 
-.statistics .container {
-  width: 80%;
-  margin: 1rem auto; }
-  .statistics .container ul {
-    display: flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .statistics .container ul li {
-      background-color: #dfe4ea; }
-      .statistics .container ul li span {
-        background-color: #18dcff; }
-
 .testimonials {
   position: relative; }
   .testimonials .overlay {
@@ -219,9 +239,77 @@ header {
     .testimonials .container .swiper-button-next {
       color: #eee; }
 
-.contact .map {
-  background-color: red;
-  width: 500px;
-  height: 400px; }
+.faq .container {
+  width: 80%;
+  max-width: 540px;
+  margin: 2rem auto; }
+  .faq .container details {
+    display: block;
+    border: 1px solid #dfe4ea;
+    background-color: #ffffff; }
+    .faq .container details[open] summary ~ * {
+      animation: accordion .6s ease-in-out; }
+    .faq .container details ~ details {
+      border-top: none; }
+    .faq .container details summary {
+      padding: 4px 8px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #1f1f1f;
+      background-color: #f1f2f6;
+      cursor: pointer; }
+    .faq .container details p {
+      margin: 4px 8px; }
+  .faq .container .add_question {
+    width: max-content;
+    margin: 1.5rem auto; }
+    .faq .container .add_question a {
+      padding: 8px 12px;
+      border: 1px solid #17c0eb;
+      text-align: center;
+      background-color: #17c0eb;
+      color: #ffffff; }
+
+.contact {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .contact_map {
+    width: 50%;
+    height: 480px;
+    position: relative; }
+    .contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0 !important;
+      overflow: hidden !important; }
+  .contact_form {
+    width: 50%;
+    padding: 1.5rem; }
+    .contact_form form {
+      width: 80%;
+      position: relative; }
+      .contact_form form > label {
+        display: block;
+        height: 34px;
+        margin: 16px auto;
+        position: relative; }
+        .contact_form form > label input[type="text"],
+        .contact_form form > label input[type="email"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+        .contact_form form > label:last-of-type {
+          width: auto;
+          height: auto; }
+      .contact_form form .context {
+        position: relative; }
+        .contact_form form .context textarea {
+          resize: vertical;
+          max-width: 100%;
+          min-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
