@@ -7,7 +7,7 @@
   outline: none; }
 
 body {
-  font-family: 'Poppins', Tahoma, Arial; }
+  font-family: 'Rubik', Tahoma, Arial; }
 
 a {
   text-decoration: none; }
@@ -188,15 +188,17 @@ header {
   .our_services .container ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    flex-grow: 1;
-    gap: 2rem; }
+    justify-content: space-between;
+    gap: 1.5rem; }
     .our_services .container ul .service {
-      max-width: 20vw;
+      width: 320px;
       text-align: center; }
-      .our_services .container ul .service_icon {
-        width: 36px; }
+      .our_services .container ul .service_title {
+        color: rebeccapurple;
+        margin-bottom: 8px; }
+      .our_services .container ul .service_description {
+        font-weight: 300; }
 
 .testimonials {
   position: relative; }

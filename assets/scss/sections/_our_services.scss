@@ -3,17 +3,20 @@
     width: 80%;
     margin: 1rem auto;
     ul{
-      display: flex;
+      display:flex;
       flex-direction: row;
-      justify-content: space-evenly;
       flex-wrap: wrap;
-      flex-grow: 1;
-      gap: 2rem;
+      justify-content: space-between;
+      gap: 1.5rem;
       .service{
-        max-width: 20vw;
+        width: 320px;
         text-align: center;
-        &_icon{
-          width: 36px;
+        &_title{
+          color: rebeccapurple;
+          margin-bottom: 8px;
+        }
+        &_description{
+          font-weight: 300;
         }
       }
     }
