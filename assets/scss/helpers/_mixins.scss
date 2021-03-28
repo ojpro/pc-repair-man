@@ -1,4 +1,31 @@
+@mixin flex-col(){
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-col-even(){
+  @include flex-col;
+  justify-content: center;
+}
+@mixin  flex-col-wrap() {
+  @include flex-col;
+  flex-wrap: wrap;
+}
+@mixin flex-row-even(){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@mixin  flex-row-even-wrap {
+  @include flex-row-even;
+  flex-wrap: wrap;
+}
+@mixin  flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 // Flex : Row : Space-Between
+
 @mixin flex-row-between() {
   display: flex;
   flex-direction: row;

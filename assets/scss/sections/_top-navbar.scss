@@ -1,16 +1,22 @@
 .top_navbar {
-  width: 100%;
   height: 32px;
   @include flex-row-between;
   background-color: $gray-200;
+  @media (max-width: 720px) {
+    @include flex-col;
+    height: auto;
+  }
   &>div {
     ul {
       padding: 4px 16px;
       @include flex-row-between;
+      @media (max-width: 720px) {
+        @include flex-row-even;
+      }
       li {
         display: inline-block;
         &~li {
-          margin-left: 1rem;
+          margin-left: .8rem;
         }
       }
     }

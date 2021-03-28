@@ -78,23 +78,33 @@ h2.section_title {
 header {
   background-color: #f1f2f6;
   width: 100%;
-  height: auto; }
+  height: auto;
+  position: relative; }
   header .top_navbar {
-    width: 100%;
     height: 32px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #dfe4ea; }
+    @media (max-width: 720px) {
+      header .top_navbar {
+        display: flex;
+        flex-direction: column;
+        height: auto; } }
     header .top_navbar > div ul {
       padding: 4px 16px;
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
+      @media (max-width: 720px) {
+        header .top_navbar > div ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly; } }
       header .top_navbar > div ul li {
         display: inline-block; }
         header .top_navbar > div ul li ~ li {
-          margin-left: 1rem; }
+          margin-left: .8rem; }
     header .top_navbar_contact ul li a {
       color: #57606f; }
     header .top_navbar_social_media_links ul {
@@ -135,7 +145,7 @@ header {
     header .hero_container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-wrap: wrap; }
       header .hero_container_info {
         margin-top: 4rem;
@@ -161,14 +171,26 @@ header {
 .services {
   padding: 8px; }
   .services_container {
+    position: relative;
     width: 60%;
     margin: auto;
     margin-top: -2.5rem;
     display: flex; }
+    @media (max-width: 670px) {
+      .services_container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 0; }
+        .services_container .service_box {
+          border-radius: 4px;
+          margin: .8rem; } }
     .services_container .service_box {
       padding: 2px 8px;
       text-align: center;
       color: #ffffff; }
+      .services_container .service_box:hover {
+        box-shadow: 0 0 8px rgba(155, 152, 152, 0.4);
+        transition: all .4s ease-in-out; }
       .services_container .service_box .service_icon {
         width: 54px;
         height: 54px;
@@ -210,7 +232,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1.5rem; }
     .our_services .container ul .service {
       width: 320px;
@@ -316,6 +338,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center; }
+  @media (max-width: 720px) {
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .contact > div {
+        width: 90%;
+        margin: auto; } }
   .contact_map {
     width: 50%;
     height: 480px;
@@ -371,6 +401,9 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center; }
+    @media (max-width: 720px) {
+      footer .info ul {
+        flex-direction: column; } }
     footer .info ul .links ul li {
       display: inline-block;
       margin: 4px; }

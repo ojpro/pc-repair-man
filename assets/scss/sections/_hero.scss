@@ -1,7 +1,7 @@
 .hero {
   padding: 4rem;
   &_container {
-    @include flex-row-between-wrap;
+    @include flex-row-even-wrap;
     &_info{
       margin-top: 4rem;
       width: 46%; //! Hard Coded
