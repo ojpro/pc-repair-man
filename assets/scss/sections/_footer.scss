@@ -1,5 +1,9 @@
 footer {
-  background-color: $gray-900;
+//   background-color: $gray-900;
+  background-image: url("../../resources/images/waveforu.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+//   background-position: center center;
   color: $white;
   .info ul {
     padding: 12px;
@@ -13,9 +17,9 @@ footer {
         display: inline-block;
         margin: 4px;
         a {
-          color: $gray-400;
+          color: $gray-100;
           &:hover {
-            color: $gray-200;
+            color: $white;
           }
         }
       }

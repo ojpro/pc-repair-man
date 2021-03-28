@@ -1,11 +1,17 @@
 .faq {
+  background-color: $gray-100;
+  padding: 28px;
+  box-shadow: 0 0 8px rgba($color: #000000, $alpha: .1) inset;
   .container {
     width: 80%;
     max-width: 540px;
     margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8f8f8;
     details {
       display: block;
-      border: 1px solid $gray-200;
+      border: 1px solid $gray-100;
       background-color: $white;
       &[open] summary~* {
         animation: accordion .6s ease-in-out;
@@ -14,22 +20,25 @@
         border-top: none;
       }
       summary {
-        padding: 4px 8px; //! DRY
+        padding: 8px 12px; //! DRY
         font-size: 18px;
         font-weight: 400;
         color: #1f1f1f;
-        background-color: $gray-100;
+        background-color: #fefefe;
         cursor: pointer;
+        box-shadow: 0 1px 6px rgba($color: #000000, $alpha: .08);
       }
       p {
-        margin: 4px 8px; //! DRY
+        margin: 8px; //! DRY
+        color: #333;
+
       }
     }
     .add_question {
       width: max-content;
       margin: 1.5rem auto;
       a {
-        padding: 8px 12px;
+        padding: 8px 12px; //! DRY
         border: 1px solid $blue-500;
         text-align: center;
         background-color: $blue-500;

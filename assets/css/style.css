@@ -15,6 +15,9 @@ a {
 ul {
   list-style: none; }
 
+button {
+  cursor: pointer; }
+
 .contact_form form > label input[type="text"],
 .contact_form form > label input[type="email"], .contact_form form .context textarea {
   border: 1px solid #dfe4ea;
@@ -39,13 +42,28 @@ ul {
 .contact_form form > label span, .contact_form form .context span {
   position: absolute;
   left: 12px;
-  top: 6px;
+  top: 8px;
   font-size: 14px;
   color: #57606f;
   z-index: 1; }
 
-.section_title {
-  text-align: center; }
+h2.section_title {
+  text-align: center;
+  margin: 2rem;
+  position: relative; }
+  h2.section_title::after, h2.section_title::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    border-radius: 99px;
+    background-color: #18dcff; }
+  h2.section_title::before {
+    width: 40px;
+    bottom: -12px; }
 
 @keyframes animatefromleft {
   from {
@@ -196,10 +214,19 @@ header {
     gap: 1.5rem; }
     .our_services .container ul .service {
       width: 320px;
-      text-align: center; }
+      text-align: center;
+      padding: 12px;
+      border-radius: 4px; }
+      .our_services .container ul .service:hover {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.035);
+        transition: all 250ms ease-in-out; }
       .our_services .container ul .service_title {
-        color: rebeccapurple;
-        margin-bottom: 8px; }
+        color: #ffffff;
+        margin-bottom: 8px;
+        background-color: #a4b0be;
+        display: inline-block;
+        padding: 6px 8px;
+        border-radius: 16px; }
       .our_services .container ul .service_description {
         font-weight: 300; }
 
@@ -227,7 +254,7 @@ header {
     margin-top: 46px;
     position: relative; }
     .testimonials .container .feedback {
-      padding: 4rem; }
+      padding: 1.5rem .4rem; }
       .testimonials .container .feedback_slide {
         text-align: center; }
         .testimonials .container .feedback_slide_photo {
@@ -244,36 +271,45 @@ header {
     .testimonials .container .swiper-button-next {
       color: #eee; }
 
-.faq .container {
-  width: 80%;
-  max-width: 540px;
-  margin: 2rem auto; }
-  .faq .container details {
-    display: block;
-    border: 1px solid #dfe4ea;
-    background-color: #ffffff; }
-    .faq .container details[open] summary ~ * {
-      animation: accordion .6s ease-in-out; }
-    .faq .container details ~ details {
-      border-top: none; }
-    .faq .container details summary {
-      padding: 4px 8px;
-      font-size: 18px;
-      font-weight: 400;
-      color: #1f1f1f;
-      background-color: #f1f2f6;
-      cursor: pointer; }
-    .faq .container details p {
-      margin: 4px 8px; }
-  .faq .container .add_question {
-    width: max-content;
-    margin: 1.5rem auto; }
-    .faq .container .add_question a {
-      padding: 8px 12px;
-      border: 1px solid #17c0eb;
-      text-align: center;
-      background-color: #17c0eb;
-      color: #ffffff; }
+.faq {
+  background-color: #f1f2f6;
+  padding: 28px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) inset; }
+  .faq .container {
+    width: 80%;
+    max-width: 540px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8f8f8; }
+    .faq .container details {
+      display: block;
+      border: 1px solid #f1f2f6;
+      background-color: #ffffff; }
+      .faq .container details[open] summary ~ * {
+        animation: accordion .6s ease-in-out; }
+      .faq .container details ~ details {
+        border-top: none; }
+      .faq .container details summary {
+        padding: 8px 12px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #1f1f1f;
+        background-color: #fefefe;
+        cursor: pointer;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08); }
+      .faq .container details p {
+        margin: 8px;
+        color: #333; }
+    .faq .container .add_question {
+      width: max-content;
+      margin: 1.5rem auto; }
+      .faq .container .add_question a {
+        padding: 8px 12px;
+        border: 1px solid #17c0eb;
+        text-align: center;
+        background-color: #17c0eb;
+        color: #ffffff; }
 
 .contact {
   margin: auto;
@@ -315,10 +351,19 @@ header {
         .contact_form form .context textarea {
           resize: vertical;
           max-width: 100%;
-          min-width: 100%; }
+          min-width: 100%;
+          height: 200px; }
+      .contact_form form button {
+        background-color: #1e90ff;
+        color: #ffffff;
+        padding: 6px 12px;
+        border: 1px solid #1e90ff;
+        border-radius: 4px; }
 
 footer {
-  background-color: #2f3542;
+  background-image: url("../../resources/images/waveforu.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff; }
   footer .info ul {
     padding: 12px;
@@ -330,9 +375,9 @@ footer {
       display: inline-block;
       margin: 4px; }
       footer .info ul .links ul li a {
-        color: #a4b0be; }
+        color: #f1f2f6; }
         footer .info ul .links ul li a:hover {
-          color: #dfe4ea; }
+          color: #ffffff; }
   footer .copyright {
     text-align: center;
     background-color: #212121;
