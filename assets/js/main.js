@@ -33,3 +33,5 @@ contactFields = document.querySelector('input[type="text"],input[type="email"],t
 contactFields.onchange = function(){
   this.classList.add('changed')
 }
+// Initialize AOS
+AOS.init({delay:600});
