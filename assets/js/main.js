@@ -34,4 +34,4 @@ contactFields.onchange = function(){
   this.classList.add('changed')
 }
 // Initialize AOS
-AOS.init({delay:600});
+AOS.init({delay:400});
