@@ -163,7 +163,7 @@ header {
           overflow: hidden;
           display: block;
           position: absolute;
-          left: -12vw;
+          right: -120vw;
           top: 48px;
           background-color: #a4b0be;
           padding: 7px;
