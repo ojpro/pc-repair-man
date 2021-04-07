@@ -40,9 +40,9 @@
         height: 40px;
         overflow: hidden;
         display: block;
-        position: absolute;
-        right: -120vw;
-        top: 48px;
+        position: fixed;
+        right: 24px;
+        top: 54px;
         background-color: $gray-400;
         padding: 7px;
         border-radius: 50%;
