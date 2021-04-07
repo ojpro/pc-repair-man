@@ -4,7 +4,7 @@
     @include flex-row-even-wrap;
     &_info{
       margin-top: 4rem;
-      width: 46%; //! Hard Coded
+      width: max-content;
       &_heading{
         color: $gray-700;
       }
