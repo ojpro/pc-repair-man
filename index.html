@@ -1,285 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Repair</title>
+    <!-- Import The Main CSS Styles File -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Import All Plugins -->
+    <!-- <link rel="stylesheet" href="resources/fontawsome/all.min.css"> -->
+    <link rel="stylesheet" href="resources/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="resources/aos/aos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PC Repair</title>
-  <!-- Import The Main CSS Styles File -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Import All Plugins -->
-  <!-- <link rel="stylesheet" href="resources/fontawsome/all.min.css">s -->
-  <link rel="stylesheet" href="resources/swiper/swiper.min.css">
-  <link rel="stylesheet" href="resources/aos/aos.css">
-</head>
-
-<body>
-  <main>
-    <header>
-      <section class="top_navbar">
-        <div class="top_navbar_contact">
-          <ul>
-            <li><a href="tel:+212765432100" class="call">+212765432100</a></li>
-            <li><a href="mailto:o.jpro@gmail.com" class="email">o.jpro@gmail.com</a></li>
-          </ul>
-        </div>
-        <div class="top_navbar_social_media_links">
-          <ul>
-            <li>
-              <a href="">
-                <svg xmlns='http://www.w3.org/2000/svg' class='facebook' viewBox='0 0 512 512'><title>Logo Facebook</title><path d='M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z' fill-rule='evenodd'/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg xmlns='http://www.w3.org/2000/svg' class='instagram' viewBox='0 0 512 512'><title>Logo Instagram</title><path d='M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z'/><path d='M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z'/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg xmlns='http://www.w3.org/2000/svg' class='twitter' viewBox='0 0 512 512'><title>Logo Twitter</title><path d='M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z'/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg xmlns='http://www.w3.org/2000/svg' class='whatsapp' viewBox='0 0 512 512'><title>Logo Whatsapp</title><path d='M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z' fill-rule='evenodd'/></svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg xmlns='http://www.w3.org/2000/svg' class='youtube' viewBox='0 0 512 512'><title>Logo Youtube</title><path d='M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z'/></svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <nav class="navbar">
-        <div class="navbar_logo">
-          <h2>Logo</h2>
-        </div>
-        <div class="navbar_links">
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <section class="hero">
-        <div class="hero_container">
-          <div class="hero_container_info">
-            <h1 class="hero_container_info_heading">WE FIX LAPTOPS, PHONES, COMPUTERS & TABLES.</h1>
-            <p class="hero_container_info_sub-heading">We Can Fix It Almost As Fast As You Can Break It.</p>
+  <body>
+    <main>
+      <header>
+        <section class="top_navbar">
+          <div class="top_navbar_contact">
+            <ul>
+              <li>
+                <a href="tel:+212765432100" class="call">+212765432100</a>
+              </li>
+              <li>
+                <a href="mailto:o.jpro@gmail.com" class="email"
+                  >o.jpro@gmail.com</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="hero_container_image">
-            <img src="resources/images//undraw_bug_fixing_oc7a.svg" alt="" data-aos="fade-left">
+          <div class="top_navbar_social_media_links">
+            <ul>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="facebook"
+                    viewBox="0 0 512 512"
+                  >
+                    <title>Logo Facebook</title>
+                    <path
+                      d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="instagram"
+                    viewBox="0 0 512 512"
+                  >
+                    <title>Logo Instagram</title>
+                    <path
+                      d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+                    />
+                    <path
+                      d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="twitter"
+                    viewBox="0 0 512 512"
+                  >
+                    <title>Logo Twitter</title>
+                    <path
+                      d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="whatsapp"
+                    viewBox="0 0 512 512"
+                  >
+                    <title>Logo Whatsapp</title>
+                    <path
+                      d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="youtube"
+                    viewBox="0 0 512 512"
+                  >
+                    <title>Logo Youtube</title>
+                    <path
+                      d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="hero_CTA">
-          <a href="" class="hero_CTA_button">Fix My Device</a>
-        </div>
-      </section>
-    </header>
-    <section class="services">
-      <div class="services_container">
-        <div class="service_box" data-aos="fade-right">
-          <h3 class="service_label">Fast</h3>
-          <img src="resources/icons/svg/023-fast-time.svg" alt="" class="service_icon">
-          <p class="service_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="service_box" data-aos="fade-up">
-          <h3 class="service_label">Support</h3>
-          <img src="resources/icons/svg/029-customer-service.svg" alt="" class="service_icon">
-          <p class="service_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="service_box" data-aos="fade-left">
-          <h3 class="service_label">Guarantee</h3>
-          <img src="resources/icons/svg/025-guarantee-1.svg" alt="" class="service_icon">
-          <p class="service_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
-    </section>
-    <h2 class="section_title">Gallery</h2>
-    <section class="gallery">
-      <div class="gallery_container">
-        <ul>
-          <!-- <li><img src="https://picsum.photos/300/300" alt=""></li> -->
-          <li><img src="resources/images/img_1.jpg" alt="" data-aos="fade-left"></li>
-          <li><img src="resources/images/img_2.jpg" alt="" data-aos="fade-right"></li>
-          <li><img src="resources/images/img_3.jpg" alt="" data-aos="fade-up"></li>
-          <li><img src="resources/images/img_4.jpg" alt="" data-aos="fade-right"></li>
-          <li><img src="resources/images/img_5.jpg" alt="" data-aos="fade-down"></li>
-          <li><img src="resources/images/img_6.jpg" alt="" data-aos="zoom-in"></li>
-          <li><img src="resources/images/img_7.jpg" alt="" data-aos="slide-right"></li>
-          <li><img src="resources/images/img_8.jpg" alt="" data-aos="fade-up"></li>
-          <li><img src="resources/images/img_9.jpg" alt="" data-aos="slide-right"></li>
-          <li><img src="resources/images/img_10.jpg" alt="" data-aos="fade-down"></li>
-          <li><img src="resources/images/img_11.jpg" alt="" data-aos="fade-left"></li>
-          <li></li>
-        </ul>
-      </div>
-    </section>
-    <h2 class="section_title">What We Do?</h2>
-    <section class="our_services">
-      <div class="container">
-        <ul>
-          <li class="service"data-aos="fade-left">
-            <h4 class="service_title">Cracked Screen</h4>
-            <p class="service_description">Cracked screen replacement services are both fast and affordable.</p>
-          </li>
-          <li class="service"data-aos="fade-up">
-           <h4 class="service_title">Water Damage</h4>
-            <p class="service_description">We will perform a diagnostic to determine the extent of the damage</p>
-          </li>
-          <li class="service"data-aos="zoom-out">
-            <h4 class="service_title">Speaker Not Working</h4>
-            <p class="service_description">You may be in need of a speaker repair or replacement.</p>
-          </li>
-          <li class="service"data-aos="zoom-in">
-            <h4 class="service_title">No Signal</h4>
-            <p class="service_description">When you are experiencing weak signal or no signal.</p>
-          </li>
-          <li class="service"data-aos="fade-down">
-            <h4 class="service_title">Broken Buttons</h4>
-            <p class="service_description">If buttons on your device are malfunctioning or broken</p>
-          </li>
-          <li class="service"data-aos="fade-up">
-            <h4 class="service_title">Dead Battery</h4>
-            <p class="service_description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <h2 class="section_title">Testimonials</h2>
-    <section class="testimonials">
-      <div class="overlay" id="swiperOverlay"></div>
-      <div class="container swiper-container" id="testimonials-swiper">
-        <div class="feedback swiper-wrapper">
-          <div class="feedback_slide swiper-slide">
-
-            <img src="https://source.unsplash.com/random?person" alt="" class="feedback_slide_photo">
-            <h2 class="feedback_slide_name">Lonny Mcnulty</h2>
-            <div class="feedback_slide_content"> One of best site i love it posts and descrip of lessons good wensite design & keep going .
+        </section>
+        <nav class="navbar">
+          <div class="navbar_logo">
+            <h2>Logo</h2>
+          </div>
+          <div class="navbar_links">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="navbar_hamburger">
+              <a id="navbar_hamburger_open">
+                <img src="resources/icons/001-menu.svg" />
+              </a>
             </div>
-
+          </div>
+        </nav>
+        <section class="hero">
+          <div class="hero_container">
+            <div class="hero_container_info">
+              <h1 class="hero_container_info_heading">
+                WE FIX LAPTOPS, PHONES, COMPUTERS & TABLES.
+              </h1>
+              <p class="hero_container_info_sub-heading">
+                We Can Fix It Almost As Fast As You Can Break It.
+              </p>
+            </div>
+            <div class="hero_container_image">
+              <img
+                src="resources/images//undraw_bug_fixing_oc7a.svg"
+                alt=""
+                data-aos="fade-left"
+              />
+            </div>
+          </div>
+          <div class="hero_CTA">
+            <a href="" class="hero_CTA_button">Fix My Device</a>
+          </div>
+        </section>
+      </header>
+      <section class="services">
+        <div class="services_container">
+          <div class="service_box" data-aos="fade-right">
+            <h3 class="service_label">Fast</h3>
+            <img
+              src="resources/icons/svg/023-fast-time.svg"
+              alt=""
+              class="service_icon"
+            />
+            <p class="service_description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="service_box" data-aos="fade-up">
+            <h3 class="service_label">Support</h3>
+            <img
+              src="resources/icons/svg/029-customer-service.svg"
+              alt=""
+              class="service_icon"
+            />
+            <p class="service_description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="service_box" data-aos="fade-left">
+            <h3 class="service_label">Guarantee</h3>
+            <img
+              src="resources/icons/svg/025-guarantee-1.svg"
+              alt=""
+              class="service_icon"
+            />
+            <p class="service_description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </section>
-    <h2 class="section_title">FAQs</h2>
-    <section class="faq">
-      <div class="container accordion">
-        <details>
-          <summary>
-            How Long This Service Takes?
-          </summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <details>
-          <summary>
-            It's Possible to fix my problem at House/Office?
-          </summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <details>
-          <summary>
-            is There a guide to help me fix my problems?
-          </summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <details>
-          <summary>
-            Is There a services for small business?
-          </summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <details>
-          <summary>
-            What about Support after delivery?
-          </summary>
-
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <details>
-          <summary>
-            Can you fix my computer online?
-          </summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat odit nesciunt deserunt consequatur expedita quo provident natus quibusdam? Natus, incidunt!</p>
-        </details>
-        <div class="add_question">
-          <a href="">Add Your Question</a>
+      </section>
+      <a name="gallery"></a>
+      <h2 class="section_title">Gallery</h2>
+      <section class="gallery">
+        <div class="gallery_container">
+          <ul>
+            <!-- <li><img src="https://picsum.photos/300/300" alt=""></li> -->
+            <li>
+              <img
+                src="resources/images/img_1.jpg"
+                alt=""
+                data-aos="fade-left"
+              />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_2.jpg"
+                alt=""
+                data-aos="fade-right"
+              />
+            </li>
+            <li>
+              <img src="resources/images/img_3.jpg" alt="" data-aos="fade-up" />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_4.jpg"
+                alt=""
+                data-aos="fade-right"
+              />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_5.jpg"
+                alt=""
+                data-aos="fade-down"
+              />
+            </li>
+            <li>
+              <img src="resources/images/img_6.jpg" alt="" data-aos="zoom-in" />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_7.jpg"
+                alt=""
+                data-aos="slide-right"
+              />
+            </li>
+            <li>
+              <img src="resources/images/img_8.jpg" alt="" data-aos="fade-up" />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_9.jpg"
+                alt=""
+                data-aos="slide-right"
+              />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_10.jpg"
+                alt=""
+                data-aos="fade-down"
+              />
+            </li>
+            <li>
+              <img
+                src="resources/images/img_11.jpg"
+                alt=""
+                data-aos="fade-left"
+              />
+            </li>
+            <li></li>
+          </ul>
         </div>
-      </div>
-    </section>
-    <h2 class="section_title">Contact us</h2>
-    <section class="contact">
-      <div class="contact_map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6572846005283!2d-4.639856485142826!3d34.53690989948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7565ff865ea4f1%3A0xdc36392f9317eabe!2sTAOUNATE%20INFORMATIQUE%20s.a.r.l!5e0!3m2!1sen!2sma!4v1616225836732!5m2!1sen!2sma"
-          allowfullscreen="" scrolling="no" loading="lazy">
-        </iframe>
-      </div>
-      <div class="contact_form">
-        <form action="">
-          <label for="name">
-              <input type="text" name="name" id="name">
-              
-            <span>Your Name</span>
-            </label>
-          <label for="email">
-            <input type="email" name="email" id="name">
-            <span>Your E-Mail</span>
-            </label>
-          <label for="subject">
-            <input type="text" name="subject" id="name">
-            <span>The Subject</span>
-            </label>
-          <div class="context">
-            <textarea name="context" id="context"></textarea>
-            <span>How we can help you?</span>
+      </section>
+      <a name="services"></a>
+      <h2 class="section_title">What We Do?</h2>
+      <section class="our_services">
+        <div class="container">
+          <ul>
+            <li class="service" data-aos="fade-left">
+              <h4 class="service_title">Cracked Screen</h4>
+              <p class="service_description">
+                Cracked screen replacement services are both fast and
+                affordable.
+              </p>
+            </li>
+            <li class="service" data-aos="fade-up">
+              <h4 class="service_title">Water Damage</h4>
+              <p class="service_description">
+                We will perform a diagnostic to determine the extent of the
+                damage
+              </p>
+            </li>
+            <li class="service" data-aos="zoom-out">
+              <h4 class="service_title">Speaker Not Working</h4>
+              <p class="service_description">
+                You may be in need of a speaker repair or replacement.
+              </p>
+            </li>
+            <li class="service" data-aos="zoom-in">
+              <h4 class="service_title">No Signal</h4>
+              <p class="service_description">
+                When you are experiencing weak signal or no signal.
+              </p>
+            </li>
+            <li class="service" data-aos="fade-down">
+              <h4 class="service_title">Broken Buttons</h4>
+              <p class="service_description">
+                If buttons on your device are malfunctioning or broken
+              </p>
+            </li>
+            <li class="service" data-aos="fade-up">
+              <h4 class="service_title">Dead Battery</h4>
+              <p class="service_description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <h2 class="section_title">Testimonials</h2>
+      <section class="testimonials">
+        <div class="overlay" id="swiperOverlay"></div>
+        <div class="container swiper-container" id="testimonials-swiper">
+          <div class="feedback swiper-wrapper">
+            <div class="feedback_slide swiper-slide">
+              <img
+                src="https://source.unsplash.com/random?person"
+                alt=""
+                class="feedback_slide_photo"
+              />
+              <h2 class="feedback_slide_name">Lonny Mcnulty</h2>
+              <div class="feedback_slide_content">
+                One of best site i love it posts and descrip of lessons good
+                wensite design & keep going .
+              </div>
+            </div>
           </div>
-          <label for="news">
-              <input type="checkbox" name="" id="news">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <a name="faq"></a>
+      <h2 class="section_title">FAQs</h2>
+      <section class="faq">
+        <div class="container accordion">
+          <details>
+            <summary>How Long This Service Takes?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <details>
+            <summary>It's Possible to fix my problem at House/Office?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <details>
+            <summary>is There a guide to help me fix my problems?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <details>
+            <summary>Is There a services for small business?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <details>
+            <summary>What about Support after delivery?</summary>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <details>
+            <summary>Can you fix my computer online?</summary>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              odit nesciunt deserunt consequatur expedita quo provident natus
+              quibusdam? Natus, incidunt!
+            </p>
+          </details>
+          <div class="add_question">
+            <a href="">Add Your Question</a>
+          </div>
+        </div>
+      </section>
+      <a name="contact"></a>
+      <h2 class="section_title">Contact us</h2>
+      <section class="contact">
+        <div class="contact_map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6572846005283!2d-4.639856485142826!3d34.53690989948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7565ff865ea4f1%3A0xdc36392f9317eabe!2sTAOUNATE%20INFORMATIQUE%20s.a.r.l!5e0!3m2!1sen!2sma!4v1616225836732!5m2!1sen!2sma"
+            allowfullscreen=""
+            scrolling="no"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+        <div class="contact_form">
+          <form action="">
+            <label for="name">
+              <input type="text" name="name" id="name" />
+
+              <span>Your Name</span>
+            </label>
+            <label for="email">
+              <input type="email" name="email" id="name" />
+              <span>Your E-Mail</span>
+            </label>
+            <label for="subject">
+              <input type="text" name="subject" id="name" />
+              <span>The Subject</span>
+            </label>
+            <div class="context">
+              <textarea name="context" id="context"></textarea>
+              <span>How we can help you?</span>
+            </div>
+            <label for="news">
+              <input type="checkbox" name="" id="news" />
               I like to subscrbe to the newsletter feed
             </label>
-          <button>Send it now</button>
-        </form>
-      </div>
-    </section>
-    <footer>
-      <div class="info">
-        <ul>
-          <li><h2>Logo</h2></li>
-          <li class="work_hours">
-            <pre>
+            <button>Send it now</button>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="info">
+          <ul>
+            <li><h2>Logo</h2></li>
+            <li class="work_hours">
+              <pre>
              <b>Work Hours:</b>
               Monday - Friday: 9:00 AM to 8:00 PM
               Saturday & Sunday: 10:00 AM to 6:00 PM
             </pre>
-          </li>
-          <li class="links">
-            <ul>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="copyright">
-        CC (Open For Use) - Coding With ❤️‍ & ☕ By ojpro(Oussama ELJabbari) - 2021.
-      </div>
-    </footer>
-  </main>
+            </li>
+            <li class="links">
+              <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          CC (Open For Use) - Coding With ❤️‍ & ☕ By ojpro(Oussama ELJabbari) -
+          2021.
+        </div>
+      </footer>
+    </main>
 
-  <script src="resources/swiper/swiper.min.js"></script>
-  <!-- <script src="resources/aos/aos.js"></script> -->
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="resources/swiper/swiper.min.js"></script>
+    <script src="resources/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
