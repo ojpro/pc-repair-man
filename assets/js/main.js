@@ -33,13 +33,13 @@ var testimonials = new Swiper("#testimonials-swiper", {
     delay: 8000,
   },
 });
-// Change Swipre Container Background every swipe
+// Change Swiper Container Background each swipe
 testimonials.on("slideChange", function () {
   overlay.style.backgroundColor =
     swiperColors[Math.floor(Math.random(10) * swiperColors.length)]; //! DRY
 });
 overlay.style.backgroundColor =
-  swiperColors[Math.floor(Math.random(10) * swiperColors.length)];
+  swiperColors[Math.floor(Math.random(10) * swiperColors.length)]; //! DRY
 
 // Contact Section
 contactFields = $('input[type="text"],input[type="email"],textarea');
@@ -54,3 +54,4 @@ let navbarLinks = $(".navbar_links");
 $(".navbar_hamburger").onclick = function () {
   navbarLinks.classList.toggle("active");
 };
+// Contact Section Fields

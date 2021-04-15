@@ -25,8 +25,7 @@ button {
   border: 1px solid #dfe4ea;
   border-radius: 4px;
   padding: 2px 12px;
-  z-index: 2;
-  background-color: transparent; }
+  z-index: 2; }
   .contact_form form > label input[type="text"]:focus,
   .contact_form form > label input[type="email"]:focus, .contact_form form .context textarea:focus {
     border: 2px solid #17c0eb; }
