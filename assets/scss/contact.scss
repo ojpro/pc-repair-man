@@ -1,0 +1,39 @@
+// Import All Needed Mixins & Resets
+@import "helpers/variables";
+@import "helpers/reset";
+@import "helpers/mixins";
+// Import Needed Sections Styles
+@import "sections/navbar";
+@import "sections/contact";
+@import "sections/footer";
+header {
+  height: 80vh;
+  background-image: url("../../resources/images/contact_hero_img.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  .navbar {
+    ul {
+      li {
+        a {
+          color: $gray-200;
+        }
+      }
+    }
+  }
+  .contact_heading {
+      text-align: center;
+      margin: 2em auto;
+      width: fit-content;
+      h1 {
+          display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $white;
+    }
+    p{
+        margin: 1em auto;
+        color: $gray-200;
+    }
+  }
+}

@@ -54,4 +54,3 @@ let navbarLinks = $(".navbar_links");
 $(".navbar_hamburger").onclick = function () {
   navbarLinks.classList.toggle("active");
 };
-// Contact Section Fields

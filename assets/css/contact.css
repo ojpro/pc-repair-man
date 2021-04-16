@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+body {
+  font-family: 'Rubik', Tahoma, Arial;
+  width: 100%;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+button {
+  cursor: pointer; }
+
+.contact_form form > label input[type="text"],
+.contact_form form > label input[type="email"], .contact_form form .context textarea {
+  border: 1px solid #dfe4ea;
+  border-radius: 4px;
+  padding: 2px 12px;
+  z-index: 2; }
+  .contact_form form > label input[type="text"]:focus,
+  .contact_form form > label input[type="email"]:focus, .contact_form form .context textarea:focus {
+    border: 2px solid #17c0eb; }
+  .contact_form form > label input.changed[type="text"],
+  .contact_form form > label input.changed[type="email"], .contact_form form .context textarea.changed {
+    background-color: #ffffff; }
+  .contact_form form > label input[type="text"]:focus + span,
+  .contact_form form > label input[type="email"]:focus + span, .contact_form form .context textarea:focus + span {
+    left: 6px;
+    top: -16px;
+    font-size: 13px;
+    z-index: 3;
+    transition: all 250ms ease-in-out; }
+
+.contact_form form > label span, .contact_form form .context span {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  font-size: 14px;
+  color: #57606f;
+  z-index: 1; }
+
+h2.section_title {
+  text-align: center;
+  margin: 2rem;
+  position: relative; }
+  h2.section_title::after, h2.section_title::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    border-radius: 99px;
+    background-color: #18dcff; }
+  h2.section_title::before {
+    width: 40px;
+    bottom: -12px; }
+
+.navbar {
+  padding: 4px 1.5rem;
+  line-height: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .navbar_logo {
+    color: #ffffff; }
+  .navbar_hamburger {
+    display: none; }
+  @media (max-width: 600px) {
+    .navbar_links {
+      background-color: #1b1e25;
+      position: fixed;
+      width: 80vw;
+      top: 0;
+      right: -80vw;
+      bottom: 0;
+      padding: 1.2rem;
+      z-index: 4;
+      transition: all .4s ease-in-out; }
+      .navbar_links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .navbar_links ul li {
+          margin: 1rem; }
+      .navbar_links.active {
+        right: 0;
+        transition: all .4s ease-in-out; }
+      .navbar_links .navbar_hamburger {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        left: -10vw;
+        top: 48px;
+        background-color: #a4b0be;
+        padding: 7px;
+        border-radius: 50%;
+        text-align: center; }
+        .navbar_links .navbar_hamburger:hover {
+          background-color: #57606f; } }
+  .navbar_links ul li {
+    display: inline-block; }
+    .navbar_links ul li a {
+      color: #747d8c;
+      position: relative; }
+      .navbar_links ul li a:hover {
+        color: #a4b0be; }
+    .navbar_links ul li ~ li {
+      margin-left: 1rem; }
+  .navbar img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer; }
+
+.contact {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  @media (max-width: 720px) {
+    .contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .contact > div {
+        width: 90%;
+        margin: auto; } }
+  .contact_map {
+    width: 50%;
+    height: 480px;
+    position: relative; }
+    .contact_map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0 !important;
+      overflow: hidden !important; }
+  .contact_form {
+    width: 50%;
+    padding: 1.5rem; }
+    .contact_form form {
+      width: 80%;
+      position: relative; }
+      .contact_form form > label {
+        display: block;
+        height: 34px;
+        margin: 16px auto;
+        position: relative; }
+        .contact_form form > label input[type="text"],
+        .contact_form form > label input[type="email"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+        .contact_form form > label:last-of-type {
+          width: auto;
+          height: auto; }
+      .contact_form form .context {
+        position: relative; }
+        .contact_form form .context textarea {
+          resize: vertical;
+          max-width: 100%;
+          min-width: 100%;
+          height: 200px; }
+      .contact_form form button {
+        background-color: #1e90ff;
+        color: #ffffff;
+        padding: 6px 12px;
+        border: 1px solid #1e90ff;
+        border-radius: 4px; }
+
+footer {
+  background-color: #3d3d3d;
+  color: #ffffff; }
+  footer .info ul {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 12px; }
+    @media (max-width: 720px) {
+      footer .info ul {
+        flex-direction: column; } }
+    footer .info ul .links ul li {
+      display: inline-block;
+      margin: 4px; }
+      footer .info ul .links ul li a {
+        color: #f1f2f6; }
+        footer .info ul .links ul li a:hover {
+          color: #ffffff; }
+  footer .copyright {
+    text-align: center;
+    background-color: #1b1e25;
+    padding: 8px; }
+
+header {
+  height: 80vh;
+  background-image: url("../../resources/images/contact_hero_img.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; }
+  header .navbar ul li a {
+    color: #dfe4ea; }
+  header .contact_heading {
+    text-align: center;
+    margin: 2em auto;
+    width: fit-content; }
+    header .contact_heading h1 {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffffff; }
+    header .contact_heading p {
+      margin: 1em auto;
+      color: #dfe4ea; }

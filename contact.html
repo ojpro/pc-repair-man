@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taounate Informatique - PC Repair</title>
+    <!-- Import The Main CSS Styles File -->
+    <link rel="stylesheet" href="assets/css/contact.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <!-- Top Navigation Bar -->
+        <nav class="navbar">
+          <div class="navbar_logo">
+            <h2>Taounate Informatique</h2>
+          </div>
+          <div class="navbar_links">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="navbar_hamburger">
+              <a id="navbar_hamburger_open">
+                <img src="resources/icons/001-menu.svg" />
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- Heading Part -->
+        <div class="contact_heading">
+          <h1>Contact Us</h1>
+          <p>We are ready to fix your computer problems as fast as possible.</p>
+        </div>
+      </header>
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact_map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.6572846005283!2d-4.639856485142826!3d34.53690989948114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7565ff865ea4f1%3A0xdc36392f9317eabe!2sTAOUNATE%20INFORMATIQUE%20s.a.r.l!5e0!3m2!1sen!2sma!4v1616225836732!5m2!1sen!2sma"
+            allowfullscreen=""
+            scrolling="no"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+        <div class="contact_form">
+          <form action="">
+            <label for="name">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+              />
+
+              <span>Your Name</span>
+            </label>
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="name"
+                placeholder="Your E-Mail"
+              />
+              <span>Your E-Mail</span>
+            </label>
+            <label for="subject">
+              <input
+                type="text"
+                name="subject"
+                id="name"
+                placeholder="The Subject"
+              />
+              <span>The Subject</span>
+            </label>
+            <div class="context">
+              <textarea name="context" id="context"></textarea>
+              <span>How we can help you?</span>
+            </div>
+            <label for="news">
+              <input type="checkbox" name="" id="news" />
+              Subscrbe to the newsletter feed
+            </label>
+            <button>Send it now</button>
+          </form>
+        </div>
+      </section>
+      <!--  Footer Section Yeah ^_^ -->
+      <footer>
+        <div class="info">
+          <ul>
+            <li><h2>Taounate Informatique</h2></li>
+            <li class="work_hours">
+              <p>
+                <b>Work Hours:</b>
+                Monday - Friday: 9:00 AM to 8:00 PM Saturday & Sunday: 10:00 AM
+                to 6:00 PM
+              </p>
+            </li>
+            <li class="links">
+              <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          CC (Open For Use) - Coding With ❤️‍ & ☕ By Oussama ELJabbari - 2021.
+        </div>
+      </footer>
+    </main>
+    <script>
+      // I Love Doing That 😄
+      let $ = (el) => document.querySelector(el);
+      // Navbar Toggler
+      let navbarLinks = $(".navbar_links");
+      $(".navbar_hamburger").onclick = function () {
+        navbarLinks.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
